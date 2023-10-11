@@ -1,5 +1,5 @@
 ---
-- name: POSTGRESQL FACTS
+- name: NODEJS FACTS
   hosts: _ansible_postgresql
   tasks:
     - debug: 

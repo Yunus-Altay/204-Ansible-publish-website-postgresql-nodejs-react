@@ -22,6 +22,7 @@
         dest: ~/project_ansible/student_files/todo-app-pern/database/Dockerfile
 
     - name: Build Postgres image and push it to the private repo
+      become: true
       community.docker.docker_image:
         build:
           path: ~/project_ansible/student_files/todo-app-pern/database
@@ -29,6 +30,7 @@
         source: build
 
     - name: Create the postgres container
+      become: true    
       docker_container:
         name: postgres-db
         image: simaox/postgres
