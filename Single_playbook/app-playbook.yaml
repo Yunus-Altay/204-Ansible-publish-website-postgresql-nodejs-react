@@ -108,13 +108,15 @@
         dest: ~/project_ansible/student_files/todo-app-pern/server/Dockerfile
 
     - name: Build Nodejs image and push it to the private repo
+      become: true
       community.docker.docker_image:
         build:
-          path: ~/project_ansible/student_files/todo-app-pern/server
+          path: /home/ec2-user/project_ansible/student_files/todo-app-pern/server
         name: simaox/nodejs
         source: build
 
     - name: Create the nodejs container
+      become: true
       docker_container:
         name: nodejs-backend
         image: simaox/nodejs
@@ -150,13 +152,15 @@
         dest: ~/project_ansible/student_files/todo-app-pern/client/Dockerfile
 
     - name: Build React image and push it to the private repo
+      become: true
       community.docker.docker_image:
         build:
-          path: ~/project_ansible/student_files/todo-app-pern/client
+          path: /home/ec2-user/project_ansible/student_files/todo-app-pern/client
         name: simaox/react
         source: build
 
     - name: Create the nodejs container
+      become: true
       docker_container:
         name: react-frontend
         image: simaox/react
