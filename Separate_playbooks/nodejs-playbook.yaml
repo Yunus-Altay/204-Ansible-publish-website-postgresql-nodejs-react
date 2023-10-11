@@ -2,13 +2,6 @@
 - name: POSTGRESQL FACTS
   hosts: _ansible_postgresql
   tasks:
-    # - name: getting postgresql database server facts
-    #   ansible.builtin.debug:
-    #     var: ansible_host
-    
-    # - debug: 
-    #     var: hostvars['Name_ansible_postgresql'].ansible_host
-
     - debug: 
         var: hostvars['Name_ansible_postgresql'].ans_public_ip
 
@@ -36,7 +29,7 @@
 
     - name: Copy dockerfile 
       ansible.builtin.copy:
-        src: ~/Project/Dockerfile-nodejs
+        src: ~/204-Ansible-publish-website-postgresql-nodejs-react/Separate_playbooks/Dockerfile-nodejs
         dest: ~/project_ansible/student_files/todo-app-pern/server/Dockerfile
 
     - name: Build Nodejs image and push it to the private repo

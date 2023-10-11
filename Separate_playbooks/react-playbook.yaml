@@ -29,7 +29,7 @@
 
     - name: Copy dockerfile 
       ansible.builtin.copy:
-        src: ~/Project/Dockerfile-react
+        src: ~/204-Ansible-publish-website-postgresql-nodejs-react/Separate_playbooks/Dockerfile-react
         dest: ~/project_ansible/student_files/todo-app-pern/client/Dockerfile
 
     - name: Build React image and push it to the private repo
