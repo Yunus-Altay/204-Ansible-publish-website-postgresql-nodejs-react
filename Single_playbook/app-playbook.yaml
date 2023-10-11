@@ -62,7 +62,7 @@
       become: true
       community.docker.docker_image:
         build:
-          path: ~/project_ansible/student_files/todo-app-pern/database
+          path: /home/ec2-user/project_ansible/student_files/todo-app-pern/database
         name: simaox/postgres
         source: build
 
