@@ -39,7 +39,7 @@ ansible development -m shell -a "docker -v && docker images && docker ps"
 # check whether docker is installed, images are built and the status of the containers
 # Check the url ==> <ReactServer-PublicIP:3000>
 
-####### ROLE PLAYBOOK #######
+####### FOR ROLE PLAYBOOK #######
 cd ~/204-Ansible-publish-website-postgresql-nodejs-react/Role_playbook
 chmod +x ./vault_passwd.sh
 ansible-playbook app-role-playbook.yaml --vault-password-file ./vault_passwd.sh
