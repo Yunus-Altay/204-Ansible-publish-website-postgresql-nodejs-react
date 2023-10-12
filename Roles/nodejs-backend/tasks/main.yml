@@ -20,7 +20,7 @@
 
 - name: Copy dockerfile 
   ansible.builtin.copy:
-    src: ~/204-Ansible-publish-website-postgresql-nodejs-react/Single_playbook/Dockerfile-nodejs
+    src: Dockerfile-nodejs
     dest: ~/project_ansible/student_files/todo-app-pern/server/Dockerfile
 
 - name: Build Nodejs image and push it to the private repo

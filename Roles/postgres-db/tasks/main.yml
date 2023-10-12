@@ -13,7 +13,7 @@
 
 - name: Copy dockerfile 
   ansible.builtin.copy:
-    src: ~/204-Ansible-publish-website-postgresql-nodejs-react/Single_playbook/Dockerfile-postgres
+    src: Dockerfile-postgres
     dest: ~/project_ansible/student_files/todo-app-pern/database/Dockerfile
 
 - name: Build Postgres image and push it to the private repo
